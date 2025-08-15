@@ -1,0 +1,46 @@
+<!--pages/guardian/dashboard/dashboard.wxml-->
+<view class="container" style="width: 637rpx; display: flex; box-sizing: border-box">
+  <view class="patient-selector" style="height: 208rpx; display: block; box-sizing: border-box; position: relative; left: 56rpx; top: -154rpx">
+    <scroll-view class="scroll-view" scroll-x scroll-with-animation>
+      <view 
+        class="patient-item {{item.id === selectedPatientId ? 'active' : ''}}"
+        wx:for="{{patients}}" 
+        wx:key="id"
+        bindtap="selectPatient"
+        data-id="{{item.id}}"
+      >
+        <image class="avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+        <text class="name">{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="content-area" style="position: relative; left: 56rpx; top: -124rpx; height: 983rpx; display: block; box-sizing: border-box; width: 716rpx">
+    <view class="section-title">安全设置</view>
+    
+    <view class="empty-tip" wx:if="{{safetyData[selectedPatientId].length === 0}}">
+      <image class="empty-icon" src="/images/empty.png"></image>
+      <text>暂未给 {{selectedPatientName}} 设置安全区域或路线</text>
+      <text class="sub-tip">点击右下角按钮开始添加吧</text>
+    </view>
+
+    <view class="card" wx:for="{{safetyData[selectedPatientId]}}" wx:key="index">
+      <view class="card-header">
+        <image class="card-icon" src="{{item.type === 'zone' ? '/images/zone.png' : '/images/route.png'}}"></image>
+        <text class="card-title">{{item.name}}</text>
+      </view>
+      <view class="card-body">
+        <text class="card-desc">{{item.description}}</text>
+      </view>
+      <view class="card-actions">
+        <view class="action-btn edit">编辑</view>
+        <view class="action-btn delete">删除</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="fab-btn" bindtap="addSetting" style="width: 106rpx; height: 104rpx; display: flex; box-sizing: border-box; left: 607rpx; top: 1037rpx">
+    <text class="icon" style="position: relative; left: 0rpx; top: -6rpx">+</text>
+  </view>
+
+</view>

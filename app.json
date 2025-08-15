@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/onboarding/form/form",
+    "pages/guardian/dashboard/dashboard",
+    "pages/guardian/map/map",
+    "pages/guardian/profile/profile"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#07c160",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/guardian/dashboard/dashboard",
+        "text": "安全区域",
+        "iconPath": "images/tabbar/guardian_dashboard.png",
+        "selectedIconPath": "images/tabbar/guardian_dashboard.png"
+      },
+      {
+        "pagePath": "pages/guardian/map/map",
+        "text": "实时地图",
+        "iconPath": "images/tabbar/map.png",
+        "selectedIconPath": "images/tabbar/map.png"
+      },
+      {
+        "pagePath": "pages/guardian/profile/profile",
+        "text": "我的",
+        "iconPath": "images/tabbar/my.png",
+        "selectedIconPath": "images/tabbar/my.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

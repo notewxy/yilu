@@ -1,0 +1,137 @@
+/* pages/guardian/dashboard/dashboard.wxss */
+
+/* pages/guardian/dashboard/dashboard.wxss */
+.container {
+  padding-bottom: 120rpx;
+}
+
+/* 患者选择器 */
+.patient-selector {
+  padding: 20rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+.scroll-view {
+  white-space: nowrap;
+}
+.patient-item {
+  display: inline-block;
+  text-align: center;
+  margin: 0 25rpx;
+  width: 120rpx;
+}
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 4rpx solid transparent;
+  transition: all 0.3s;
+}
+.patient-item.active .avatar {
+  border-color: #07c160;
+  transform: scale(1.1);
+}
+.name {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 8rpx;
+  display: block;
+  white-space: normal;
+}
+.patient-item.active .name {
+  color: #07c160;
+  font-weight: bold;
+}
+
+/* 内容区域 */
+.content-area {
+  padding: 30rpx;
+}
+.section-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+  padding: 30rpx;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+.card-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.card-title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.card-body {
+  padding: 20rpx 0;
+  color: #888;
+  font-size: 28rpx;
+}
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20rpx;
+}
+.action-btn {
+  padding: 8rpx 24rpx;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+}
+.edit {
+  border: 1px solid #07c160;
+  color: #07c160;
+}
+.delete {
+  border: 1px solid #ee0a24;
+  color: #ee0a24;
+}
+
+/* 悬浮按钮 */
+.fab-btn {
+  position: fixed;
+  bottom: 150rpx;
+  right: 40rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #07c160, #05a552);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60rpx;
+  box-shadow: 0 6px 16px rgba(7, 193, 96, 0.4);
+}
+
+/* 空状态提示 */
+.empty-tip {
+  text-align: center;
+  padding-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #999;
+}
+.empty-icon {
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+}
+.sub-tip {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
