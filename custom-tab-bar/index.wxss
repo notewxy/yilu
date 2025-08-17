@@ -1,0 +1,29 @@
+/* custom-tab-bar/index.wxss */
+
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120rpx; /* 适配iPhone X等底部安全区域 */
+  padding-bottom: env(safe-area-inset-bottom);
+  background: white;
+  display: flex;
+  border-top: 1px solid #f0f0f0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+}
+
+.tab-bar-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+}
+
+.tab-bar-item .icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 4rpx;
+}

@@ -1,6 +1,17 @@
 // pages/guardian/map/map.js
 // pages/guardian/map/map.js
 Page({
+
+  onShow: function () {
+    // 每次页面显示时，都去更新 tabBar 的选中状态
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 1 // 0 代表第一个 tab
+      })
+    }
+  },
+
   data: {
     // 地图中心点的经纬度，可以默认为一个城市中心
     centerLongitude: 116.39742,

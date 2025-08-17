@@ -5,7 +5,10 @@
     "pages/onboarding/form/form",
     "pages/guardian/dashboard/dashboard",
     "pages/guardian/map/map",
-    "pages/guardian/profile/profile"
+    "pages/guardian/profile/profile",
+    "pages/patient/travel/travel",
+    "pages/patient/profile/profile",
+    "custom-tab-bar/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -13,6 +16,7 @@
     "navigationBarBackgroundColor": "#ffffff"
   },
   "tabBar": {
+    "custom": true,
     "color": "#8a8a8a",
     "selectedColor": "#07c160",
     "backgroundColor": "#ffffff",
@@ -20,21 +24,23 @@
     "list": [
       {
         "pagePath": "pages/guardian/dashboard/dashboard",
-        "text": "安全区域",
-        "iconPath": "images/tabbar/guardian_dashboard.png",
-        "selectedIconPath": "images/tabbar/guardian_dashboard.png"
+        "text": "安全区域"
       },
       {
         "pagePath": "pages/guardian/map/map",
-        "text": "实时地图",
-        "iconPath": "images/tabbar/map.png",
-        "selectedIconPath": "images/tabbar/map.png"
+        "text": "实时地图"
       },
       {
         "pagePath": "pages/guardian/profile/profile",
-        "text": "我的",
-        "iconPath": "images/tabbar/my.png",
-        "selectedIconPath": "images/tabbar/my.png"
+        "text": "我的"
+      },
+      {
+        "pagePath": "pages/patient/travel/travel",
+        "text": "出行"
+      },
+      {
+        "pagePath": "pages/patient/profile/profile",
+        "text": "我的"
       }
     ]
   },
