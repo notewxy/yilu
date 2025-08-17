@@ -12,20 +12,20 @@ Component({
       {
         "pagePath": "/pages/guardian/dashboard/dashboard",
         "text": "安全区域",
-        "iconPath": "images/tabbar/guardian_dashboard.png",
-        "selectedIconPath": "images/tabbar/guardian_dashboard.png"
+        "iconPath": "/images/tabbar/guardian_dashboard.png",
+        "selectedIconPath": "/images/tabbar/guardian_dashboard.png"
       },
       {
         "pagePath": "pages/guardian/map/map",
         "text": "实时地图",
-        "iconPath": "images/tabbar/map.png",
-        "selectedIconPath": "images/tabbar/map.png"
+        "iconPath": "/images/tabbar/map.png",
+        "selectedIconPath": "/images/tabbar/map.png"
       },
       {
         "pagePath": "pages/guardian/profile/profile",
         "text": "我的",
-        "iconPath": "images/tabbar/my.png",
-        "selectedIconPath": "images/tabbar/my.png"
+        "iconPath": "/images/tabbar/my.png",
+        "selectedIconPath": "/images/tabbar/my.png"
       }
       // ... 其他监护人 tab
     ],
@@ -40,8 +40,8 @@ Component({
       {
         "pagePath": "pages/patient/profile/profile",
         "text": "我的",
-        "iconPath": "images/tabbar/my.png",
-        "selectedIconPath": "images/tabbar/my.png"
+        "iconPath": "/images/tabbar/my.png",
+        "selectedIconPath": "/images/tabbar/my.png"
       }
       // ... 其他患者 tab
     ],

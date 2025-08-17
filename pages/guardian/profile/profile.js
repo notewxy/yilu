@@ -1,17 +1,6 @@
 // pages/guardian/profile/profile.js
 // pages/guardian/profile/profile.js
 Page({
-
-  onShow: function () {
-    // 每次页面显示时，都去更新 tabBar 的选中状态
-    if (typeof this.getTabBar === 'function' &&
-      this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 2 // 0 代表第一个 tab
-      })
-    }
-  },
-
   data: {
     // 监护人信息 (应从全局或缓存中获取)
     guardianInfo: {
@@ -26,6 +15,13 @@ Page({
   },
 
   onShow() {
+    // 每次页面显示时，都去更新 tabBar 的选中状态
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 2 // 0 代表第一个 tab
+      })
+    }
     // 每次进入页面时，都应该重新获取最新的数据
     // this.getProfileData();
   },

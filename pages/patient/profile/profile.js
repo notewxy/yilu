@@ -6,7 +6,7 @@ Page({
     if (typeof this.getTabBar === 'function' &&
       this.getTabBar()) {
       this.getTabBar().setData({
-        selected: 0 // 0 代表第一个 tab
+        selected: 1 // 0 代表第一个 tab
       })
     }
   },
