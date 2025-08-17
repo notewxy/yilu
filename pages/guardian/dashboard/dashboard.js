@@ -4,6 +4,8 @@ Page({
   data: {
     // 患者列表
     patients: [
+      // 在最前面新增一个 type 为 'add' 的特殊对象
+      { id: 'add', type: 'add', name: '添加家人' },
       { id: 1, name: '爸爸', avatar: '/images/avatar1.png' },
       { id: 2, name: '妈妈', avatar: '/images/avatar2.png' },
       { id: 3, name: '爷爷', avatar: '/images/avatar3.png' },
@@ -38,12 +40,29 @@ Page({
 
   // 切换选中的患者
   selectPatient(e) {
-    const selectedId = e.currentTarget.dataset.id;
-    const selectedName = this.data.patients.find(p => p.id === selectedId).name;
-    this.setData({
-      selectedPatientId: selectedId,
-      selectedPatientName: selectedName
+    const selectedItem = e.currentTarget.dataset.item;
+
+    // 判断用户点击的是“添加”按钮还是患者头像
+    if (selectedItem.type === 'add') {
+      // 如果是添加按钮，执行添加逻辑
+      this.addPatient();
+    } else {
+      // 否则，执行切换患者的逻辑
+      this.setData({
+        selectedPatientId: selectedItem.id,
+        selectedPatientName: selectedItem.name
+      });
+    }
+  },
+
+  // 新增一个专门处理添加患者的函数
+  addPatient() {
+    wx.showToast({
+      title: '跳转到添加家人页面',
+      icon: 'none'
     });
+    // 在这里可以跳转到新的页面，用于添加家人信息
+    // wx.navigateTo({ url: '/pages/guardian/add-patient/add-patient' })
   },
 
   // 点击添加按钮

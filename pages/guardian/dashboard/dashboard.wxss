@@ -1,6 +1,18 @@
 /* pages/guardian/dashboard/dashboard.wxss */
 
-/* pages/guardian/dashboard/dashboard.wxss */
+/* ！！！新增这段代码来覆盖全局样式！！！ */
+.container {
+  /* 重置 display 为普通块级，取消 flex 布局 */
+  display: block; 
+  /* 取消全局的居中对齐 */
+  align-items: initial; 
+  /* 取消全局的上下内边距 */
+  padding: 0;
+  height: auto;
+}
+/* ！！！新增结束！！！ */
+
+
 .container {
   padding-bottom: 120rpx;
 }
@@ -20,6 +32,44 @@
   margin: 0 25rpx;
   width: 120rpx;
 }
+
+/* pages/guardian/dashboard/dashboard.wxss */
+/* ... patient-item, avatar 等样式保持不变 ... */
+
+/* ！！！新增以下样式！！！ */
+.add-btn-item .add-icon-wrapper {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 4rpx dashed #ccc; /* 使用虚线边框 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.add-btn-item .add-icon {
+  font-size: 60rpx;
+  color: #ccc;
+  font-weight: 200;
+}
+
+.add-btn-item .name {
+  color: #999; /* 文字颜色也变灰 */
+}
+
+/* 点击时的效果 */
+.add-btn-item:active .add-icon-wrapper {
+  border-color: #07c160;
+  background-color: #f0fdf6;
+}
+
+.add-btn-item:active .add-icon,
+.add-btn-item:active .name {
+  color: #07c160;
+}
+/* ！！！新增结束！！！ */
+
 .avatar {
   width: 100rpx;
   height: 100rpx;

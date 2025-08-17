@@ -1,2 +1,46 @@
 <!--pages/guardian/profile/profile.wxml-->
-<text>pages/guardian/profile/profile.wxml</text>
+<view class="container">
+  <view class="profile-card" bindtap="editGuardianProfile">
+    <image class="avatar" src="{{guardianInfo.avatar}}" mode="aspectFill"></image>
+    <view class="info">
+      <text class="nickname">{{guardianInfo.nickname}}</text>
+      <text class="desc">查看或编辑个人资料</text>
+    </view>
+    <image class="arrow" src="/images/arrow-right.png"></image>
+  </view>
+
+  <view class="section-container">
+    <view class="section-title">我守护的家人</view>
+    <view class="list-group">
+      <view class="list-item patient-item" wx:for="{{managedPatients}}" wx:key="id" bindtap="viewPatientDetail" data-id="{{item.id}}">
+        <image class="patient-avatar" src="{{item.avatar}}"></image>
+        <view class="patient-info">
+          <text class="patient-name">{{item.name}}</text>
+          <text class="patient-relation">{{item.relation}}</text>
+        </view>
+        <image class="arrow" src="/images/arrow-right.png"></image>
+      </view>
+       <view class="list-item add-patient-item" bindtap="addPatient">
+        <text class="add-icon">+</text>
+        <text>添加新的家人</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section-container">
+    <view class="list-group">
+      <view class="list-item">
+        <text>通用设置</text>
+        <image class="arrow" src="/images/arrow-right.png"></image>
+      </view>
+      <view class="list-item">
+        <text>关于我们</text>
+        <image class="arrow" src="/images/arrow-right.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="logout-btn-wrapper">
+    <button class="logout-btn" bindtap="logout">退出登录</button>
+  </view>
+</view>

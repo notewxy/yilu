@@ -1,2 +1,19 @@
 <!--pages/guardian/map/map.wxml-->
-<text>pages/guardian/map/map.wxml</text>
+<view class="container">
+  <map
+    id="patientMap"
+    class="map-view"
+    longitude="{{centerLongitude}}"
+    latitude="{{centerLatitude}}"
+    scale="{{scale}}"
+    markers="{{markers}}"
+    show-location
+    enable-zoom
+    enable-scroll
+   style="height: 1291rpx; display: block; box-sizing: border-box; left: -2rpx; top: -200rpx; position: relative">
+  </map>
+
+  <view class="controls">
+    <button class="control-btn" bindtap="includeAllMarkers" style="position: relative; left: 154rpx; top: 61rpx">视野聚焦</button>
+  </view>
+</view>

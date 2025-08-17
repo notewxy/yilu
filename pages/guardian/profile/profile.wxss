@@ -1,1 +1,137 @@
 /* pages/guardian/profile/profile.wxss */
+
+
+/* ！！！新增这段代码来覆盖全局样式！！！ */
+.container {
+  /* 重置 display 为普通块级，取消 flex 布局 */
+  display: block; 
+  /* 取消全局的居中对齐 */
+  align-items: initial; 
+  /* 取消全局的上下内边距 */
+  padding: 0;
+  height: auto;
+  /* 确保页面有背景色 */
+  background-color: #f7f8fa;
+  min-height: 100vh;
+}
+/* ！！！新增结束！！！ */
+
+.container {
+  background-color: #f7f8fa;
+  min-height: 100vh;
+}
+
+/* 顶部信息卡 */
+.profile-card {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  margin: 30rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.nickname {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+.desc {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 8rpx;
+}
+.arrow {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+/* 列表容器 */
+.section-container {
+  margin: 0 30rpx 30rpx;
+}
+.section-title {
+  font-size: 28rpx;
+  color: #888;
+  margin-bottom: 20rpx;
+  padding-left: 10rpx;
+}
+.list-group {
+  background-color: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  font-size: 30rpx;
+  position: relative;
+}
+/* 列表项之间的分割线 */
+.list-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 0;
+  height: 1px;
+  background-color: #f5f5f5;
+}
+
+/* 患者列表项的特殊样式 */
+.patient-item .patient-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.patient-item .patient-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.patient-name {
+  font-size: 30rpx;
+  color: #333;
+}
+.patient-relation {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 添加家人按钮 */
+.add-patient-item {
+  color: #07c160;
+  justify-content: center;
+  font-weight: bold;
+}
+.add-icon {
+  font-size: 40rpx;
+  margin-right: 10rpx;
+}
+
+
+/* 退出按钮 */
+.logout-btn-wrapper {
+  padding: 0 30rpx;
+  margin-top: 60rpx;
+}
+.logout-btn {
+  background-color: #fff;
+  color: #ee0a24;
+  font-weight: bold;
+  border-radius: 16rpx !important; /* 增加权重防止被覆盖 */
+}

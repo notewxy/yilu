@@ -1,1 +1,58 @@
 /* pages/guardian/map/map.wxss */
+
+/* pages/guardian/map/map.wxss */
+.container {
+  /* 确保容器和页面一样高 */
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.map-view {
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
+  position: absolute;
+  bottom: 150rpx; /* 避开tabBar */
+  left: 30rpx;
+}
+
+.control-btn {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 8rpx;
+  padding: 10rpx 20rpx;
+  font-size: 28rpx;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/** app.wxss **/
+
+/* ... 你原有的全局样式 ... */
+
+/* ---- 地图自定义气泡样式 (新增) ---- */
+.callout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent; /* 背景设为透明 */
+}
+
+.callout-container .avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  border: 4rpx solid #07c160; /* 加一个绿色边框，更醒目 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.callout-container .name {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6); /* 半透明黑色背景 */
+  padding: 4rpx 12rpx;
+  border-radius: 6rpx;
+}
