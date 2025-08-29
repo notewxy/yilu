@@ -16,13 +16,13 @@ Component({
         "selectedIconPath": "/images/tabbar/guardian_dashboard.png"
       },
       {
-        "pagePath": "pages/guardian/map/map",
+        "pagePath": "/pages/guardian/map/map",
         "text": "实时地图",
         "iconPath": "/images/tabbar/map.png",
         "selectedIconPath": "/images/tabbar/map.png"
       },
       {
-        "pagePath": "pages/guardian/profile/profile",
+        "pagePath": "/pages/guardian/profile/profile",
         "text": "我的",
         "iconPath": "/images/tabbar/my.png",
         "selectedIconPath": "/images/tabbar/my.png"
@@ -34,11 +34,11 @@ Component({
       {
         "pagePath": "/pages/patient/travel/travel",
         "text": "出行",
-        "iconPath": "/images/tabbar/travel_inactive.png",
-        "selectedIconPath": "/images/tabbar/travel_active.png"
+        "iconPath": "/images/tabbar/map.png",
+        "selectedIconPath": "/images/tabbar/map.png"
       },
       {
-        "pagePath": "pages/patient/profile/profile",
+        "pagePath": "/pages/patient/profile/profile",
         "text": "我的",
         "iconPath": "/images/tabbar/my.png",
         "selectedIconPath": "/images/tabbar/my.png"
@@ -55,7 +55,7 @@ Component({
   methods: {
     updateTabBar() {
       // 从全局数据中获取用户角色
-      const role = app.globalData.userRole || 'guardian'; // 默认为监护人
+      const role = app.globalData.userRole;
 
       if (role === 'patient') {
         this.setData({

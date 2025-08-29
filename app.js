@@ -15,6 +15,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    //userRole = 'patient'
+    userRole : 'patient',
+    //userRole :'guardian',
   }
 })

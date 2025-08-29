@@ -10,10 +10,10 @@
     show-location
     enable-zoom
     enable-scroll
-   style="height: 1291rpx; display: block; box-sizing: border-box; left: -2rpx; top: -200rpx; position: relative">
+   >
   </map>
 
-  <view class="controls">
-    <button class="control-btn" bindtap="includeAllMarkers" style="position: relative; left: 154rpx; top: 61rpx">视野聚焦</button>
+  <view class="controls" >
+    <button class="control-btn" bindtap="includeAllMarkers">视野聚焦</button>
   </view>
 </view>

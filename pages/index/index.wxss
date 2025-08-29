@@ -4,6 +4,7 @@ page {
   display: flex;
   flex-direction: column;
 }
+
 .scrollarea {
   flex: 1;
   overflow-y: hidden;
@@ -12,9 +13,10 @@ page {
 .userinfo {
   display: flex;
   flex-direction: column;
+  justify-items: center;
   align-items: center;
   color: #aaa;
-  width: 80%;
+  width: 100%;
 }
 
 .userinfo-avatar {
@@ -54,9 +56,15 @@ page {
 }
 
 .nickname-label {
+  text-align: center;
   width: 105px;
 }
 
 .nickname-input {
+  text-align: center;
   flex: 1;
 }
+.usermotto{
+  text-align: center;
+}
+

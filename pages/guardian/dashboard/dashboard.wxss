@@ -153,7 +153,7 @@
 /* 悬浮按钮 */
 .fab-btn {
   position: fixed;
-  bottom: 150rpx;
+  bottom: 250rpx;
   right: 40rpx;
   width: 100rpx;
   height: 100rpx;

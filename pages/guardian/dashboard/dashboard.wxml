@@ -30,7 +30,7 @@
 </scroll-view>
   </view>
 
-  <view class="content-area" style="height: 1074rpx; display: block; box-sizing: border-box">
+  <view class="content-area" >
     <view class="section-title" style="position: relative; left: 0rpx; top: 16rpx">安全设置</view>
     
     <view class="empty-tip" wx:if="{{safetyData[selectedPatientId].length === 0}}">

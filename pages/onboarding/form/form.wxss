@@ -8,12 +8,16 @@
 }
 
 .page-title {
+  justify-content: center;
+  text-align: center;
   font-size: 48rpx;
   font-weight: bold;
   margin-bottom: 16rpx;
 }
 
 .page-desc {
+  justify-content: center;
+  text-align: center;
   font-size: 28rpx;
   color: #888;
   margin-bottom: 60rpx;

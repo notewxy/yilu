@@ -1,1 +1,97 @@
 /* pages/patient/profile/profile.wxss */
+
+/* pages/patient/profile/profile.wxss */
+.container {
+  padding: 40rpx;
+}
+
+.page-header {
+  font-size: 48rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+
+.info-card {
+  background-color: #fff;
+  border-radius: 24rpx;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 50rpx 40rpx;
+}
+
+.section {
+  margin-bottom: 40rpx;
+}
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  border: 6rpx solid #07c160;
+  margin-bottom: 20rpx;
+}
+
+.name {
+  font-size: 52rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+
+.details {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 32rpx;
+}
+
+.detail-item {
+  text-align: center;
+}
+
+.detail-item .label {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.detail-item .value {
+  color: #333;
+  font-weight: bold;
+}
+
+.divider {
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 10rpx 0 40rpx;
+}
+
+.contact-item, .medical-info {
+  margin-bottom: 30rpx;
+}
+
+.contact-item .label, .medical-info .label {
+  font-size: 28rpx;
+  color: #888;
+  margin-bottom: 8rpx;
+}
+.contact-item .value, .medical-info .value {
+  font-size: 34rpx;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.contact-item .value.main {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.contact-item .value.phone {
+  color: #07c160;
+}

@@ -1,2 +1,20 @@
 <!--pages/patient/travel/travel.wxml-->
-<text>pages/patient/travel/travel.wxml</text>
+<view class="container">
+  <view class="header">
+    <view class="title">要去哪里？</view>
+    <view class="subtitle">点击下面的卡片，立即开始导航</view>
+  </view>
+
+  <view class="route-list">
+  <view class="route-card" wx:for="{{routes}}" wx:key="id" bindtap="startNavigation" data-route="{{item}}">
+    <view class="route-name">{{item.name}}</view>
+  </view>
+</view>
+
+  <view class="emergency-call-wrapper">
+    <button class="emergency-call-btn" bindtap="makeEmergencyCall">
+      <image class="sos-icon" src="/images/sos.png"></image>
+      联系家人
+    </button>
+  </view>
+</view>

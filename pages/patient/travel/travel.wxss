@@ -1,1 +1,91 @@
 /* pages/patient/travel/travel.wxss */
+
+/* pages/patient/travel/travel.wxss */
+.container {
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 60rpx;
+}
+
+.title {
+  font-size: 64rpx;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 30rpx;
+  color: #888;
+  margin-top: 10rpx;
+  text-align: center;
+}
+
+.route-list {
+  display: grid;
+  grid-template-columns: 1fr; /* 每行一个卡片 */
+  gap: 40rpx; /* 卡片之间的间距 */
+}
+
+/* pages/patient/travel/travel.wxss */
+
+/* ... .container, .header 等样式保持不变 ... */
+
+.route-card {
+  height: 200rpx;
+  background-color: #fff;
+  border-radius: 24rpx;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 新增：让内容水平居中 */
+  padding: 0 50rpx;
+  transition: all 0.2s;
+}
+
+.route-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* .route-icon 样式可以删掉，因为它已经不存在了 */
+
+.route-name {
+  font-size: 52rpx; /* 加大字号，更醒目 */
+  font-weight: bold;
+  color: #343434;
+  /* margin-right: 40rpx; 已被移除 */
+}
+
+/* ... emergency-call-btn 等样式保持不变 ... */
+
+/* 紧急联系按钮 */
+.emergency-call-wrapper {
+  position: fixed;
+  bottom: 250rpx; /* 避开 tabBar */
+  left: 40rpx;
+  right: 40rpx;
+}
+
+.emergency-call-btn {
+  height: 100rpx;
+  background-color: #ee0a24;
+  color: white;
+  border-radius: 50rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 16px rgba(238, 10, 36, 0.3);
+}
+
+.sos-icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 20rpx;
+}

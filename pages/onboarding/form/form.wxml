@@ -1,8 +1,8 @@
 <view class="container">
   <view class="page-title">请选择您的角色</view>
-  <view class="page-desc" style="width: 324rpx; display: block; box-sizing: border-box; position: relative; left: 12rpx; top: 10rpx">请根据您的实际情况选择</view>
+  <view class="page-desc" >请根据您的实际情况选择</view>
 
-  <view class="role-selector" style="width: 472rpx; display: flex; box-sizing: border-box; height: 74rpx">
+  <view class="role-selector" >
   <view 
     class="role-btn {{role === 'guardian' ? 'active' : ''}}" 
     bindtap="onRoleChange" 
